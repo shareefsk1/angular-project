@@ -7,4 +7,24 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
 
+public firstnumber:number = 0;
+public secondnumber:number = 0;
+
+public result: number = 0;
+
+sum(){
+  this.result = this.firstnumber + this.secondnumber;
+}
+sub(){
+  this.result = this.firstnumber - this.secondnumber;
+}
+
+mul(){
+  this.result = this.firstnumber * this.secondnumber;
+}
+
+div(){
+  this.result = this.firstnumber / this.secondnumber;
+}
+
 }

@@ -1,12 +1,14 @@
 <div class="parent">
     <h1>Calculator</h1>
 
-    <input type="number"> 
+    <input [(ngModel)]="firstnumber" type="number"> 
     <br> <br>
-    <input type="number">
+    <input [(ngModel)]="secondnumber" type="number">
     <br><br>
-    <button>Add(+)</button>
-    <button>Substract(-)</button>
-    <button>Multipication(*)</button>
-    <button>Division(/)</button>
+    <button (click)="sum()">Add(+)</button>
+    <button (click)="sub()">Substract(-)</button>
+    <button (click)="mul()">Multipication(*)</button>
+    <button (click)="div()">Division(/)</button>
+
+    <h2>Result is: {{result}} </h2>
 </div>
