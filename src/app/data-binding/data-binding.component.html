@@ -1,0 +1,20 @@
+<h1>
+    My Name is {{ name}}
+</h1>
+<h3>Age:  {{ age}}</h3>
+<h3>Is {{name}} Indian:    {{IsIndian}}</h3>
+
+
+<button (click)="test()"> Submit</button>
+
+<button (dblclick)="test2()">Cancel</button>
+
+<input (keypress)="test3()" type="text" name="" id="">
+
+<button (mouseenter)="test4()"> Hello</button>
+<button (mouseleave)="test5()"> World</button>
+
+<input type="number" name="" id="" [(ngModel)] = "PhoneNumber">
+
+
+<p>{{PhoneNumber}}</p>
