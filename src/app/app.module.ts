@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { GpayComponent } from './gpay/gpay.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GpayComponent } from './gpay/gpay.component';
     DataBindingComponent,
     RectangleComponent,
     DirectivesComponent,
-    GpayComponent
+    GpayComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

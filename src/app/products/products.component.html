@@ -1,0 +1,24 @@
+<button (click)="sorting()"  class="btn btn-primary"> Sort</button>
+
+<br><br>
+
+
+
+
+<table border="2" class="table table-bordered ">
+    <thead>
+        <tr >
+            <th *ngFor="let key of keys">{{key}}</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let value of details">
+            <td>{{value.name | uppercase }}</td>
+            <td>{{value.price}}</td>
+            <td>{{value.quantity}}</td>
+            <td [ngStyle]="{'background-color' : value.rating <=3 ? 'red': 'green'} ">{{value.rating}}</td>
+        </tr>
+    </tbody>
+</table>
+
