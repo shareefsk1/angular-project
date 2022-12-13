@@ -27,4 +27,10 @@ export class ProductsComponent {
   
     this.details = this.details.sort((a:any,b:any)=>b.price-a.price);
   }
+  sorting1(){
+  
+    this.details = this.details.sort((a:any,b:any)=>a.name.localeCompare(b.name));
+  }
+
+
 }

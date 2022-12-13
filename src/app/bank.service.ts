@@ -20,7 +20,7 @@ deposite(amount:number){
 }
 
 getbalance(){
-  return this.balance ;
+  return (this.balance) ;
 }
 
 

@@ -9,23 +9,19 @@ import { BankService } from '../bank.service';
 export class GpayComponent {
     public amount : number = 0 ;
 
-    
-
     constructor(private _bankService:BankService){
 
     }
 
     withdraw(){
-        this._bankService.withdraw(this.amount);
-
-  
+        this._bankService.withdraw(this.amount)
     }
 
     deposite(){
-        this._bankService.deposite(this.amount);
+        this._bankService.deposite(this.amount)
     }
 
     showbalance(){
-     alert( this._bankService.getbalance());
+      alert(this._bankService.getbalance())
     }
 }
