@@ -8,6 +8,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MailComponent } from './mail/mail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductsComponent } from './products/products.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
           {path:"products",component:ProductsComponent},
           {path:"vehicle", component:VehicleComponent},
           {path:"sbibank", component:SbibankComponent},
-          {path:"flipkart",component:FlipkartComponent}
+          {path:"flipkart",component:FlipkartComponent},
+          {path:"mail", component:MailComponent}
         ]},
   
   {path:'', component: LoginComponent},

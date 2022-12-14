@@ -1,0 +1,5 @@
+<div *ngFor="let mail of mails" [ngClass]="{'visted':mail.completed == true , 'notvisited':mail.completed == false}">
+    <p>id: {{mail.id}}</p>
+    <p> Title: {{mail.title}}</p>
+
+</div>
