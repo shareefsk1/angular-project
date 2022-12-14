@@ -1,0 +1,13 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let key of keys">{{key}}</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td *ngFor="let key of keys">{{ account[key] }}</td>
+        </tr>
+    </tbody>
+</table>
