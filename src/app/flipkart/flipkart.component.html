@@ -1,0 +1,13 @@
+
+    <div class="parent2" *ngFor="let product of products">
+        <div class="image-container">
+            <img src="{{product.image}}" alt="" height="200" width="200">
+        </div>
+        <div>    
+            <p class="title">Name: {{product.title}}</p>
+            <p><label for="" style="font-weight: bold;">Price: </label> {{product.price | currency:"INR":"symbol"}}</p>
+            <p><label for="" style="font-weight: bold;">Total Reviews: </label> {{product.rating.count}}</p>
+            <p> <label for="" style="font-weight: bold;">Rate: </label> {{product.rating.rate}} </p>
+            <p class="desc"><label for="" style="font-weight: bold;">Description: </label> {{product.description}}</p>
+        </div>
+    </div>

@@ -16,7 +16,8 @@ import { GpayComponent } from './gpay/gpay.component';
 import { ProductsComponent } from './products/products.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule} from '@angular/common/http';
-import { SbibankComponent } from './sbibank/sbibank.component'
+import { SbibankComponent } from './sbibank/sbibank.component';
+import { FlipkartComponent } from './flipkart/flipkart.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SbibankComponent } from './sbibank/sbibank.component'
     GpayComponent,
     ProductsComponent,
     VehicleComponent,
-    SbibankComponent
+    SbibankComponent,
+    FlipkartComponent
   ],
   imports: [
     BrowserModule,
