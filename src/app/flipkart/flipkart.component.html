@@ -1,5 +1,5 @@
-
-    <div class="parent2" *ngFor="let product of products">
+<div class="row">
+    <div class="parent2 col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let product of products">
         <div class="image-container">
             <img src="{{product.image}}" alt="" height="200" width="200">
         </div>
@@ -11,3 +11,4 @@
             <p class="desc"><label for="" style="font-weight: bold;">Description: </label> {{product.description}}</p>
         </div>
     </div>
+</div>

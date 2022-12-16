@@ -1,14 +1,11 @@
 .parent2{
     background-color: white;
-    display: flex;
-    margin: 20px;
-    
-    height: 50%;
-    width: 40%;
-    display: inline-flex;
-    padding: 30px;
+    // margin: 20px;
+    // padding: 30px;
     overflow: auto;
     border-radius: 20px;
+    height: 500px;
+    margin-bottom: 20px;
 }
 
 .parent2:hover{
@@ -19,9 +16,9 @@
 
 
 
-.image-container{
-    margin: 0px 20px;
-}
+// .image-container{
+//     margin: 0px 20px;
+// }
 
 
 .desc{
