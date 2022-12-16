@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -30,7 +31,8 @@ const routes: Routes = [
           {path:"sbibank", component:SbibankComponent},
           {path:"flipkart",component:FlipkartComponent},
           {path:"mail", component:MailComponent},
-          {path:"bd",component:BoredomComponent}
+          {path:"bd",component:BoredomComponent},
+          {path:'create-vehicle', component: CreateVehicleComponent}
         ]},
   
   {path:'', component: LoginComponent},

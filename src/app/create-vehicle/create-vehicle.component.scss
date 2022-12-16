@@ -1,0 +1,18 @@
+*{
+    margin: 10px;
+}
+
+label{
+    display: inline-block;
+    width: 130px;
+    font-weight: 700;
+    font-size: large;
+}
+
+label::after{
+    content: ":";
+}
+
+input{
+    padding: 10px;
+}
