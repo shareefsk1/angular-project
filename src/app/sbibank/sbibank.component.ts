@@ -10,6 +10,7 @@ export class SbibankComponent {
 
   public accounts : any = []
   public keys : any = []
+  public filter: any = ''
 
   constructor(private _sbiBankService:SbibankService){
       this._sbiBankService.getdata().subscribe(
@@ -19,6 +20,17 @@ export class SbibankComponent {
         },
         (err:any) => {
           alert('server not found')
+        }
+      )
+  }
+
+  filterButton(){
+      this._sbiBankService.getFilteredData(this.filter).subscribe(
+        (data:any) => {
+          this.accounts = data ;
+        },
+        (err:any) => {
+          alert('internal server error')
         }
       )
   }

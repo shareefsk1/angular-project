@@ -7,10 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class SbibankService {
 
+
   constructor(private _httpService:HttpClient){
    
    }
    getdata():Observable<any>{
       return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals")
+   }
+
+   getFilteredData(keyword:string):Observable<any>{
+      return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?filter=" + keyword) ;
    }
 }
