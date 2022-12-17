@@ -22,4 +22,12 @@ export class SbibankService {
    getSortedData(column:any,value:any):Observable<any>{
     return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?sortBy=" + column + "&order=" + value)
    }
+
+   createAccountData(data:any):Observable<any>{
+    return this._httpService.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data)
+   }
+
+   deleteAccount(id:any):Observable<any>{
+    return this._httpService.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/" + id)
+   }
 }

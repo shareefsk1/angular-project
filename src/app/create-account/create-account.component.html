@@ -1,0 +1,26 @@
+
+<form  [formGroup]="accountForm" action="">
+    <label for="">account_name</label>
+    <input type="text" formControlName="account_name">
+    <br>
+
+    <label for="">account_number</label>
+    <input type="text" formControlName="account_number">
+    <br>
+
+    <label for="">currency</label>
+    <input type="text" formControlName="currency">
+    <br>
+
+    <label for="">user_image</label>
+    <input type="text" formControlName="user_image">
+    <br>
+
+    <label for="">available_balance</label>
+    <input type="text" formControlName="available_balance">
+    <br>
+
+</form>
+
+<br>
+<button (click)="createAccount()"  class="btn btn-primary">Create Account</button>

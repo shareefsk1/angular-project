@@ -13,6 +13,7 @@ export class SbibankComponent {
   public filter: any = ''
   public order: any = ""
   public value: any = ""
+  
 
   constructor(private _sbiBankService:SbibankService){
       this._sbiBankService.getdata().subscribe(
@@ -47,5 +48,17 @@ export class SbibankComponent {
         }
       )
   }
+
+deleteAccount(id:string){
+  this._sbiBankService.deleteAccount(id).subscribe(
+    (data:any) => {
+      alert('Deleted successfully') ;
+      location.reload() ;
+    },
+    (err:any) => {
+      alert('internal server error') ;
+    }
+  )
+}
 
 }

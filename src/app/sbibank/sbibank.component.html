@@ -20,12 +20,14 @@
     <thead>
         <tr>
             <th *ngFor="let key of keys">{{key}}</th>
+            <th>Action</th>
         </tr>
     </thead>
 
     <tbody>
         <tr *ngFor="let account of accounts">
             <td *ngFor="let key of keys">{{ account[key] }}</td>
+            <td ><button (click)="deleteAccount(account.id)" class="btn btn-danger">Delete</button></td>
         </tr>
     </tbody>
 </table>

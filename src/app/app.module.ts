@@ -21,6 +21,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     MailComponent,
     BoredomComponent,
     CreateVehicleComponent,
+    CreateAccountComponent,
   
   ],
   imports: [
