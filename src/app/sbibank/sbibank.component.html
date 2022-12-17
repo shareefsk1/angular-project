@@ -1,9 +1,22 @@
 <input [(ngModel)]="filter" type="text" name="" id="">
 <button (click)="filterButton()" class="btn btn-primary">Filter</button>
-<br>
 
 
-<table class="table">
+<select [(ngModel)]="order" name="" id="">
+    <option value="account_name">accountName</option>
+    <option value="account_number">account_number</option>
+    <option value="currency">currency</option>
+</select>
+
+<select [(ngModel)]="value" name="" id="">
+    <option value="asc">asending</option>
+    <option value="desc">Desending</option>
+</select>
+
+<button (click)="sortby()" class="btn btn-primary">Sort</button>
+
+
+<table border="2" class="table ">
     <thead>
         <tr>
             <th *ngFor="let key of keys">{{key}}</th>

@@ -18,4 +18,8 @@ export class SbibankService {
    getFilteredData(keyword:string):Observable<any>{
       return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?filter=" + keyword) ;
    }
+
+   getSortedData(column:any,value:any):Observable<any>{
+    return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?sortBy=" + column + "&order=" + value)
+   }
 }
