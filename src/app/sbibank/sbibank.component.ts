@@ -13,7 +13,6 @@ export class SbibankComponent {
   public filter: any = ''
   public order: any = ""
   public value: any = ""
-  
 
   constructor(private _sbiBankService:SbibankService){
       this._sbiBankService.getdata().subscribe(
