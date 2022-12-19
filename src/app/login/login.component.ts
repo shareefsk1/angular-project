@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { LoginServiceService } from '../login-service.service';
 
 @Component({
@@ -17,13 +18,14 @@ export class LoginComponent {
 
       })
 
-      constructor(private _loginService:LoginServiceService){}
+      constructor(private _loginService:LoginServiceService, private _routing:Router){}
 
       submit(){
         console.log(this.loginForm)
         this._loginService.login(this.loginForm.value).subscribe(
           (data) => {
-            alert('login Successful')
+           
+            this._routing.navigateByUrl("/dashboard")
           },
           (err:any) => {
             alert('Incorrect Details')
