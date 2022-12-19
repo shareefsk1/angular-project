@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './authentication.guard';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
@@ -20,7 +21,7 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent, children:[
+  {path:'dashboard', component: DashboardComponent, canActivate:[AuthenticationGuard], children:[
           {path:"home" , component: HomeComponent},
           {path:'calculator', component:CalculatorComponent},
           {path:"data-binding", component:DataBindingComponent},

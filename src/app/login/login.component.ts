@@ -24,7 +24,7 @@ export class LoginComponent {
         console.log(this.loginForm)
         this._loginService.login(this.loginForm.value).subscribe(
           (data) => {
-           
+           sessionStorage.setItem('my-app-token',data.token)
             this._routing.navigateByUrl("/dashboard")
           },
           (err:any) => {
