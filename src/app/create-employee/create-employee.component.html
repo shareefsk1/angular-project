@@ -1,0 +1,56 @@
+<form [formGroup]="employeeForm" action="">
+    <label for="">Name:</label>
+    <input formControlName="name" type="text" name="" id="">
+    <br>
+
+    <label for="">Mobile No:</label>
+    <input formControlName="mobile" type="number" name="" id="">
+    <br>
+
+    <label for="">Email:</label>
+    <input formControlName="email" type="text" name="" id="">
+    <br>
+
+    <label for="">DoB:</label>
+    <input formControlName="DoB" type="datetime-local" name="" id="">
+    <br>
+
+    <div formGroupName="Adderess">
+        <label for="">AddressLine</label>
+        <input formControlName="addressLine" type="text">
+        <br>
+
+        <label for="">City</label>
+        <input formControlName="city" type="text">
+        <br>
+
+        <label for="">State</label>
+        <input formControlName="state" type="text">
+        <br>
+
+        <label for="">Pincode</label>
+        <input formControlName="pincode" type="text">
+        <br>
+
+        <div formGroupName="Location">
+
+            <label for="">Nearby</label>
+            <input formControlName="nearby" type="text">
+            <br>
+
+            <label for="">Landmark</label>
+            <input formControlName="landmark" type="text">
+            <br>
+        </div>
+
+    </div>
+
+
+
+
+
+    <button (click)="submit()" class="btn btn-primary"> Submit</button>
+</form>
+
+
+
