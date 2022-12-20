@@ -1,0 +1,54 @@
+<form [formGroup]="studentForm" action="">
+    <label for="">Name:</label>
+    <input formControlName="name" type="text" name="" id="">
+    <br>
+
+    <label for="">Phone:</label>
+    <input formControlName="phone" type="number" name="" id="">
+    <br>
+
+    <label for="">Email:</label>
+    <input formControlName="email" type="text" name="" id="">
+    <br>
+
+    <div formGroupName="address">
+        <label for="">City</label>
+        <input formControlName="city" type="text" name="" id="">
+        <br>
+
+        <label for="">State</label>
+        <input formControlName="state" type="text" name="" id="">
+        <br>
+
+        <label for="">pin</label>
+        <input formControlName="pin" type="number" name="" id="">
+        <br>
+        
+    </div>
+
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls ; let i = index">
+            <div formGroupName="{{i}}">
+                <h3>Enter card Details {{i + 1}}</h3>
+                <label for="">Number</label>
+                <input formControlName="number" type="number" name="" id="">
+                <br>
+
+                <label for="">Expiry</label>
+                <input formControlName="expiry" type="month" name="" id="">
+                <br>
+
+                <label for="">CVV</label>
+                <input formControlName="cvv" type="number" name="" id="">
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <button (click)="add()" class="btn btn-primary"> Add Card</button>
+    <button (click)="submit()" class="btn btn-primary">Submit</button>
+
+</form>

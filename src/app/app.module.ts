@@ -22,6 +22,7 @@ import { MailComponent } from './mail/mail.component';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     BoredomComponent,
     CreateVehicleComponent,
     CreateAccountComponent,
+    CreateStudentComponent,
   
   ],
   imports: [
