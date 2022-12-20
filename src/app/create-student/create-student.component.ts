@@ -42,4 +42,8 @@ export class CreateStudentComponent {
         )
       )
     }
+
+    delete(i:number) {
+      this.cardsFormArray.removeAt(i);
+    }
 }

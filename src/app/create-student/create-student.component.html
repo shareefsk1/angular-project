@@ -29,7 +29,7 @@
     <div formArrayName="cards">
         <div *ngFor="let card of cardsFormArray.controls ; let i = index">
             <div formGroupName="{{i}}">
-                <h3>Enter card Details {{i + 1}}</h3>
+                <h3>Enter card Details: {{i + 1}}</h3>
                 <label for="">Number</label>
                 <input formControlName="number" type="number" name="" id="">
                 <br>
@@ -41,6 +41,8 @@
                 <label for="">CVV</label>
                 <input formControlName="cvv" type="number" name="" id="">
                 <br>
+
+                <button (click)="delete(i)" class="btn btn-danger">Delete</button>
 
             </div>
         </div>
