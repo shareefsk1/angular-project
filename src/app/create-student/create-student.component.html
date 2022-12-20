@@ -1,3 +1,5 @@
+
+<!-- Normal Form -->
 <form [formGroup]="studentForm" action="">
     <label for="">Name:</label>
     <input formControlName="name" type="text" name="" id="">
@@ -11,6 +13,8 @@
     <input formControlName="email" type="text" name="" id="">
     <br>
 
+
+    <!-- Nested Form -->
     <div formGroupName="address">
         <label for="">City</label>
         <input formControlName="city" type="text" name="" id="">
@@ -25,6 +29,8 @@
         <br>
         
     </div>
+
+    <!-- FormArray -->
 
     <div formArrayName="cards">
         <div *ngFor="let card of cardsFormArray.controls ; let i = index">
@@ -51,9 +57,9 @@
 
 
     <button (click)="add()" class="btn btn-primary"> Add Card</button> <br>
-
+<!-- Dyanamic Form -->
     <label for="">Type</label>
-    
+
     <input type="radio" name="type" id="day" value="dayScholor" formControlName="type" >
     <label for="day">Day scholor</label>
 
