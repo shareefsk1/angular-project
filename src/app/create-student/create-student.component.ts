@@ -18,7 +18,11 @@ export class CreateStudentComponent {
           state:new FormControl(),
           pin:new FormControl(),
         }),
-        cards:new FormArray([])
+        cards:new FormArray([]),
+        type: new FormControl(),
+        busfee: new FormControl(),
+        hostelfee: new FormControl()
+
       }
     )
 
