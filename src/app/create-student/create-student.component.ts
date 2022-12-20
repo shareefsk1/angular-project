@@ -13,12 +13,16 @@ export class CreateStudentComponent {
         name: new FormControl(),
         phone: new FormControl(),
         email: new FormControl(),
+        // Nested Form
         address: new FormGroup({
           city:new FormControl(),
           state:new FormControl(),
           pin:new FormControl(),
         }),
+        // Form Array
         cards:new FormArray([]),
+
+        // Dyanamic Form
         type: new FormControl(),
         busfee: new FormControl(),
         hostelfee: new FormControl()
@@ -30,11 +34,12 @@ export class CreateStudentComponent {
       console.log(this.studentForm)
     }
 
-
+    // Getting Empty FormArray Assigning Variable
     get cardsFormArray(){
       return this.studentForm.get('cards') as FormArray;
     }
 
+    // Adding FormGroup To Empty FormArray
     add(){
       this.cardsFormArray.push(
         new FormGroup(
@@ -46,7 +51,7 @@ export class CreateStudentComponent {
         )
       )
     }
-
+    //  Deleteing Form From FormArray
     delete(i:number) {
       this.cardsFormArray.removeAt(i);
     }
