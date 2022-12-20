@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-employee',
@@ -20,14 +20,32 @@ export class CreateEmployeeComponent {
       city:new FormControl(),
       state:new FormControl(),
       pincode:new FormControl(),
-      
+
       // Double Nested Form
       Location: new FormGroup({
         nearby: new FormControl(),
         landmark: new FormControl()
-      })
-    })
+      }),
+    }),
+        // FormArray
+        Education : new FormArray([])
   })
+
+
+  get employeeEducation(){
+    return this.employeeForm.get('Education') as FormArray ;
+  }
+
+
+  add(){
+    this.employeeEducation.push(
+    new FormGroup ({
+      qualification:new FormControl(),
+      year: new FormControl(),
+      percentage: new FormControl()
+        })
+  )
+  }
 
   submit(){
     console.log(this.employeeForm)
