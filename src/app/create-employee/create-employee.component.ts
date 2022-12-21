@@ -28,7 +28,17 @@ export class CreateEmployeeComponent {
       }),
     }),
         // FormArray
-        Education : new FormArray([])
+        Education : new FormArray([]),
+
+        // Dynamic Form
+        type : new FormControl(),
+        html : new FormControl(),
+        css: new FormControl(),
+        javascript: new FormControl(),
+        angular: new FormControl(),
+        node: new FormControl(),
+        express: new FormControl(),
+        mongo: new FormControl(),
   })
 
 
@@ -49,6 +59,10 @@ export class CreateEmployeeComponent {
 
   submit(){
     console.log(this.employeeForm)
+  }
+
+  delete(i:number){
+    this.employeeEducation.removeAt(i)
   }
 
 }

@@ -61,10 +61,55 @@
                 <label for="">Percentage</label>
                 <input formControlName="percentage" type="text" name="" id="">
                 <br>
+                <button (click)="delete(i)"  class="btn btn-danger">Delete</button>
             </div>
         </div>
     </div>
-<button (click)="add()" class="btn btn-primary">Add</button>
+    <button (click)="add()" class="btn btn-primary">Add Education</button>
+    <br>
+
+    <label for="">Role</label>
+
+    <input type="radio" name="type" id="fe" value="frontend" formControlName="type">
+    <label for="fe">FrontEnd Engineer</label>
+
+    <input type="radio" name="type" id="be" value="backend" formControlName="type">
+    <label for="be">BackEnd Engineer</label>   
+    <br>
+
+    <div *ngIf="employeeForm.get('type')?.value == 'frontend'">
+        <h3>Years of Experince in</h3>
+        <label for="">HTML:</label>
+        <input  formControlName="html" type="text">
+        <br>
+
+        <label for="">CSS:</label>
+        <input formControlName="css" type="text">
+        <br>
+
+        <label for="">JAVASCRIPT:</label>
+        <input formControlName="javascript" type="text">
+        <br>
+
+        <label for="">ANGULAR:</label>
+        <input formControlName="angular" type="text">
+        <br>
+    </div>
+
+    <div *ngIf="employeeForm.get('type')?.value == 'backend'">
+        <h3>Years of Experince in</h3>
+        <label for="">NODE-JS:</label>
+        <input formControlName="node" type="text">
+        <br>
+
+        <label for="">EXPRESS-JS:</label>
+        <input formControlName="express" type="text">
+        <br>
+
+        <label for="">MONGO DB:</label>
+        <input formControlName="mongo" type="text">
+        <br>
+    </div>
 
 
 
