@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-student',
@@ -9,15 +9,15 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 export class CreateStudentComponent {
 
     public studentForm : FormGroup = new FormGroup(
-      {
-        name: new FormControl(),
-        phone: new FormControl(),
-        email: new FormControl(),
+      {                                 
+        name: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+        phone: new FormControl(null, [Validators.required,Validators.min(100000000), Validators.max(9999999999)]),
+        email: new FormControl(null, [Validators.required, Validators.email ]),
         // Nested Form
         address: new FormGroup({
-          city:new FormControl(),
+          city:new FormControl(null, [Validators.required, Validators.minLength(2)]),
           state:new FormControl(),
-          pin:new FormControl(),
+          pin:new FormControl(null, [Validators.required, Validators.min(100000), Validators.max(999999)]),
         }),
         // Form Array
         cards:new FormArray([]),
@@ -44,9 +44,9 @@ export class CreateStudentComponent {
       this.cardsFormArray.push(
         new FormGroup(
           {
-            number: new FormControl(),
+            number: new FormControl(null, [Validators.required, Validators.min(1000000000000000), Validators.max(9999999999999999)]),
             expiry:new FormControl(),
-            cvv:new FormControl()
+            cvv:new FormControl( null, [Validators.required, Validators.min(100),Validators.max(999)])
           }
         )
       )

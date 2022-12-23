@@ -1,16 +1,44 @@
 
 <!-- Normal Form -->
 <form [formGroup]="studentForm" action="">
+   
     <label for="">Name:</label>
     <input formControlName="name" type="text" name="" id="">
+     <!-- For validers Below div -->
+    <div class="error" *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.invalid">
+        <p *ngIf="studentForm.get('name')?.errors?.['required']"> Enter is required</p>
+        <p *ngIf="studentForm.get('name')?.errors?.['minlength']">Name should be min 3 chars</p>
+    </div>
     <br>
+
+    <!--Input states  -->
+    <p>Touched:  {{ studentForm.get('name')?.touched }}</p>
+    <p>UnTouched:  {{ studentForm.get('name')?.untouched }}</p>
+    <p>Dirty: {{ studentForm.get('name')?.dirty }}</p>
+    <p>Pristine: {{ studentForm.get('name')?.pristine }}</p>
+    <p>Valid: {{ studentForm.get('name')?.valid }}</p>
+    <p>Invalid: {{ studentForm.get('name')?.invalid }}</p>
+
+    <p>Value: {{ studentForm.get('name')?.value }}</p>
+    <p>Errors: {{ studentForm.get('name')?.errors | json }}</p>
 
     <label for="">Phone:</label>
     <input formControlName="phone" type="number" name="" id="">
+    <!-- For validers Below div -->
+    <div class="error" *ngIf="studentForm.get('phone')?.touched && studentForm.get('phone')?.invalid">
+        <p *ngIf="studentForm.get('phone')?.errors?.['required']"> Phone No is required</p>
+        <p *ngIf="studentForm.get('phone')?.errors?.['min']">Phone should be minimum 10 numbers</p>
+        <p *ngIf="studentForm.get('phone')?.errors?.['max']">Phone should be maximum 10 numbers</p>
+    </div>
     <br>
 
     <label for="">Email:</label>
     <input formControlName="email" type="text" name="" id="">
+    <!-- For validers Below div -->
+    <div class="error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid">
+        <p *ngIf="studentForm.get('email')?.errors?.['required']"> Email  is required</p>
+        <p *ngIf="studentForm.get('email')?.errors?.['email']"> Enter valid Email</p>
+    </div>
     <br>
 
 
@@ -18,6 +46,11 @@
     <div formGroupName="address">
         <label for="">City</label>
         <input formControlName="city" type="text" name="" id="">
+        <!-- For validers Below div and conditions for nested forms  -->
+        <div class="error" *ngIf="studentForm.get('address')?.get('city')?.touched && studentForm.get('address')?.get('city')?.invalid">
+            <p *ngIf="studentForm.get('address')?.get('city')?.errors?.['required']"> City is required</p>
+            <p *ngIf="studentForm.get('address')?.get('city')?.errors?.['minlength']">Minimum 2 chars required for city</p>
+        </div>
         <br>
 
         <label for="">State</label>
@@ -26,6 +59,12 @@
 
         <label for="">pin</label>
         <input formControlName="pin" type="number" name="" id="">
+           <!-- For validers Below div and conditions for Nested Objects (or)Nested Forms  -->
+           <div class="error" *ngIf="studentForm.get('address')?.get('pin')?.touched && studentForm.get('address')?.get('pin')?.invalid">
+            <p *ngIf="studentForm.get('address')?.get('pin')?.errors?.['required']"> Pincode is required</p>
+            <p *ngIf="studentForm.get('address')?.get('pin')?.errors?.['min']">Minimum 6 chars required for pincode</p>
+            <p *ngIf="studentForm.get('address')?.get('pin')?.errors?.['max']">Maximun 6 chars  for pincode</p>
+        </div>
         <br>
         
     </div>
@@ -38,6 +77,16 @@
                 <h3>Enter card Details: {{i + 1}}</h3>
                 <label for="">Number</label>
                 <input formControlName="number" type="number" name="" id="">
+
+                <!-- For validers Below div and conditions for Form array  -->
+                <!-- In Form Array Pushed FormGroup was placed at controls Based on Controls we access Objects -->
+                <!-- Like => cardsFormArray.controls[i].get('number')? -->
+                    <div class="error" *ngIf="cardsFormArray.controls[i].get('number')?.touched && cardsFormArray.controls[i].get('number')?.invalid">
+                        <p *ngIf="cardsFormArray.controls[i].get('number')?.errors?.['required']"> Card is required</p>
+                        <p *ngIf="cardsFormArray.controls[i].get('number')?.errors?.['min']">Minimum 16 chars required for card</p>
+                        <p *ngIf="cardsFormArray.controls[i].get('number')?.errors?.['max']">Maximun 16 chars  for card</p>
+                    </div>
+
                 <br>
 
                 <label for="">Expiry</label>
@@ -46,6 +95,14 @@
 
                 <label for="">CVV</label>
                 <input formControlName="cvv" type="number" name="" id="">
+                   <!-- For validers Below div and conditions for Form array  -->
+                <!-- In Form Array Pushed FormGroup was placed at controls Based on Controls we access Objects -->
+                <!-- Like => cardsFormArray.controls[i].get('cvv')? -->
+                <div class="error" *ngIf="cardsFormArray.controls[i].get('cvv')?.touched && cardsFormArray.controls[i].get('cvv')?.invalid">
+                    <p *ngIf="cardsFormArray.controls[i].get('cvv')?.errors?.['required']"> CVV is required</p>
+                    <p *ngIf="cardsFormArray.controls[i].get('cvv')?.errors?.['min']">Minimum 3 chars required for CVV</p>
+                    <p *ngIf="cardsFormArray.controls[i].get('cvv')?.errors?.['max']">Maximun 3 chars  for CVV</p>
+                </div>
                 <br>
 
                 <button (click)="delete(i)" class="btn btn-danger">Delete</button>
