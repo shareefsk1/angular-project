@@ -3,7 +3,7 @@
     <input formControlName="name" type="text" name="" id="">
 
     <!-- adding validators (This type was Normal form) -->
-    <div *ngIf="employeeForm.get('name')?.touched && employeeForm.get('name')?.invalid">
+    <div class="error" *ngIf="employeeForm.get('name')?.touched && employeeForm.get('name')?.invalid">
         <p *ngIf="employeeForm.get('name')?.errors?.['required']">Name is required</p>
         <p *ngIf="employeeForm.get('name')?.errors?.['minlength']">Name sholud have min 4 chars</p>
         <p *ngIf="employeeForm.get('name')?.errors?.['maxlength']">Name shouldn't have max 15 chars</p>
@@ -13,7 +13,7 @@
     <label for="">Mobile No:</label>
     <input formControlName="mobile" type="number" name="" id="">
        <!-- adding validators (This type was Normal form) -->
-       <div *ngIf="employeeForm.get('mobile')?.touched && employeeForm.get('mobile')?.invalid">
+       <div class="error" *ngIf="employeeForm.get('mobile')?.touched && employeeForm.get('mobile')?.invalid">
         <p *ngIf="employeeForm.get('mobile')?.errors?.['required']">Number is required</p>
         <p *ngIf="employeeForm.get('mobile')?.errors?.['min']">Number sholud have min 10 digits</p>
         <p *ngIf="employeeForm.get('mobile')?.errors?.['max']">Number should have max 10 digits</p>
@@ -23,7 +23,7 @@
     <label for="">Email:</label>
     <input formControlName="email" type="text" name="" id="">
          <!-- adding validators (This type was Normal form) -->
-         <div *ngIf="employeeForm.get('email')?.touched && employeeForm.get('email')?.invalid">
+         <div class="error" *ngIf="employeeForm.get('email')?.touched && employeeForm.get('email')?.invalid">
             <p *ngIf="employeeForm.get('email')?.errors?.['required']">Email is required</p>
             <p *ngIf="employeeForm.get('email')?.errors?.['email']"> Enter Valid Email</p>
         </div>
@@ -37,7 +37,7 @@
         <label for="">AddressLine</label>
         <input formControlName="addressLine" type="text">
         <!-- valiadators for Nested Forms -->
-        <div *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.touched && employeeForm.get('Adderess')?.get('addressLine')?.invalid">
+        <div class="error" *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.touched && employeeForm.get('Adderess')?.get('addressLine')?.invalid">
             <p *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.errors?.['required']">AddereeLine requried</p>
             <p *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.errors?.['minlength']">AddressLine should min 3 chars</p>
             <p *ngIf="employeeForm.get('Adderess')?.get('addressLine')?.errors?.['maxlength']">AddressLine Shouldn't have max 20 chars</p>
@@ -47,7 +47,7 @@
         <label for="">City</label>
         <input formControlName="city" type="text">
                 <!-- valiadators for Nested Forms -->
-                <div *ngIf="employeeForm.get('Adderess')?.get('city')?.touched && employeeForm.get('Adderess')?.get('city')?.invalid">
+                <div class="error" *ngIf="employeeForm.get('Adderess')?.get('city')?.touched && employeeForm.get('Adderess')?.get('city')?.invalid">
                     <p *ngIf="employeeForm.get('Adderess')?.get('city')?.errors?.['required']">city requried</p>
                     <p *ngIf="employeeForm.get('Adderess')?.get('city')?.errors?.['minlength']">city should min 3 chars</p>
                     <p *ngIf="employeeForm.get('Adderess')?.get('city')?.errors?.['maxlength']">city Shouldn't have max 20 chars</p>
@@ -57,7 +57,7 @@
         <label for="">State</label>
         <input formControlName="state" type="text">
             <!-- valiadators for Nested Forms -->
-            <div *ngIf="employeeForm.get('Adderess')?.get('state')?.touched && employeeForm.get('Adderess')?.get('state')?.invalid">
+            <div class="error" *ngIf="employeeForm.get('Adderess')?.get('state')?.touched && employeeForm.get('Adderess')?.get('state')?.invalid">
                 <p *ngIf="employeeForm.get('Adderess')?.get('state')?.errors?.['required']">State requried</p>
                 <p *ngIf="employeeForm.get('Adderess')?.get('state')?.errors?.['minlength']">State should min 3 chars</p>
                 <p *ngIf="employeeForm.get('Adderess')?.get('state')?.errors?.['maxlength']">State Shouldn't have max 20 chars</p>
@@ -67,7 +67,7 @@
         <label for="">Pincode</label>
         <input formControlName="pincode" type="text">
             <!-- valiadators for Nested Forms -->
-            <div *ngIf="employeeForm.get('Adderess')?.get('pincode')?.touched && employeeForm.get('Adderess')?.get('pincode')?.invalid">
+            <div class="error" *ngIf="employeeForm.get('Adderess')?.get('pincode')?.touched && employeeForm.get('Adderess')?.get('pincode')?.invalid">
                 <p *ngIf="employeeForm.get('Adderess')?.get('pincode')?.errors?.['required']">pincode requried</p>
                 <p *ngIf="employeeForm.get('Adderess')?.get('pincode')?.errors?.['min']">pincode should min 6 chars</p>
                 <p *ngIf="employeeForm.get('Adderess')?.get('pincode')?.errors?.['max']">pincode Shouldn't have max 6 chars</p>
@@ -79,7 +79,7 @@
             <label for="">Nearby</label>
             <input formControlName="nearby" type="text">
             <!-- valiadators for Double Nested Forms -->
-            <div *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.touched &&employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.invalid">
+            <div class="error" *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.touched &&employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.invalid">
                 <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.errors?.['required']">NearBy is required</p>
                 <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.errors?.['minlength']">NearBy Should have min 3 chars</p>
                 <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('nearby')?.errors?.['maxlength']">NearBy not Exceed 20 chars</p>
@@ -89,7 +89,7 @@
             <label for="">Landmark</label>
             <input formControlName="landmark" type="text">
                    <!-- valiadators for Double Nested Forms -->
-                   <div *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('landmark')?.touched &&employeeForm.get('Adderess')?.get('Location')?.get('landmark')?.invalid">
+                   <div class="error" *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('landmark')?.touched &&employeeForm.get('Adderess')?.get('Location')?.get('landmark')?.invalid">
                     <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('landmark')?.errors?.['required']">Landmark is required</p>
                     <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('landmark')?.errors?.['minlength']">Landmark Should have min 3 chars</p>
                     <p *ngIf="employeeForm.get('Adderess')?.get('Location')?.get('landmark')?.errors?.['maxlength']">Landmark not Exceed 20 chars</p>
@@ -106,10 +106,22 @@
                 <h3>Educational Details: {{i+1}}</h3>
                 <label for="">Qualification</label>
                 <input formControlName="qualification" type="text" name="" id="">
+                <!-- validators for Form Array -->
+                <div class="error" *ngIf="employeeEducation.controls[i]?.get('qualification')?.touched && employeeEducation.controls[i]?.get('qualification')?.invalid ">
+                    <p  *ngIf="employeeEducation.controls[i]?.get('qualification')?.errors?.['required']">Qualification required</p>
+                    <p  *ngIf="employeeEducation.controls[i]?.get('qualification')?.errors?.['minlength']">Qualification Should have min 3 chars</p>
+                    <p  *ngIf="employeeEducation.controls[i]?.get('qualification')?.errors?.['maxlength']">Qualification Shouldn't have max 20 chars</p>
+                </div>
                 <br>
 
                 <label for="">Year</label>
-                <input formControlName="year" type="text" name="" id="">
+                <input formControlName="year" type="number" name="" id="">
+                    <!-- validators for Form Array -->
+                    <div class="error" *ngIf="employeeEducation.controls[i]?.get('year')?.touched && employeeEducation.controls[i]?.get('year')?.invalid ">
+                        <p  *ngIf="employeeEducation.controls[i]?.get('year')?.errors?.['required']">Year required</p>
+                        <p  *ngIf="employeeEducation.controls[i]?.get('year')?.errors?.['min']">Year Should above 1980</p>
+                        <p  *ngIf="employeeEducation.controls[i]?.get('year')?.errors?.['max']">Year Should below 2022</p>
+                    </div>
                 <br>
 
                 <label for="">Percentage</label>

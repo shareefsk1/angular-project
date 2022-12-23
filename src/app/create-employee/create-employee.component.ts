@@ -50,8 +50,8 @@ export class CreateEmployeeComponent {
   add(){
     this.employeeEducation.push(
     new FormGroup ({
-      qualification:new FormControl(),
-      year: new FormControl(),
+      qualification:new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
+      year: new FormControl( null, [Validators.required, Validators.min(1980), Validators.max(2022)]),
       percentage: new FormControl()
         })
   )
