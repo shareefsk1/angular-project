@@ -32,12 +32,12 @@ export class CreateEmployeeComponent {
 
         // Dynamic Form
         type : new FormControl(),
-        html : new FormControl(),
-        css: new FormControl(),
-        javascript: new FormControl(),
-        angular: new FormControl(),
-        node: new FormControl(),
-        express: new FormControl(),
+        html : new FormControl(null, [Validators.required]),
+        css: new FormControl(null, [Validators.required]),
+        javascript: new FormControl(null, [Validators.required]),
+        angular: new FormControl(null, [Validators.required]),
+        node: new FormControl(null, [Validators.required]),
+        express: new FormControl(null, [Validators.required]),
         mongo: new FormControl(),
   })
 

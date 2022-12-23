@@ -147,18 +147,34 @@
         <h3>Years of Experince in</h3>
         <label for="">HTML:</label>
         <input  formControlName="html" type="text">
+        <!-- validators for Dynamic Form -->
+        <div class="error" *ngIf="employeeForm.get('html')?.touched && employeeForm.get('html')?.invalid">
+            <p>You should fill this one</p>
+        </div>
         <br>
 
         <label for="">CSS:</label>
         <input formControlName="css" type="text">
+                <!-- validators for Dynamic Form -->
+                <div class="error" *ngIf="employeeForm.get('css')?.touched && employeeForm.get('css')?.invalid">
+                    <p>You should fill this one</p>
+                </div>
         <br>
 
         <label for="">JAVASCRIPT:</label>
         <input formControlName="javascript" type="text">
+                <!-- validators for Dynamic Form -->
+                <div class="error" *ngIf="employeeForm.get('javascript')?.touched && employeeForm.get('javascript')?.invalid">
+                    <p>You should fill this one</p>
+                </div>
         <br>
 
         <label for="">ANGULAR:</label>
         <input formControlName="angular" type="text">
+                <!-- validators for Dynamic Form -->
+                <div class="error" *ngIf="employeeForm.get('angular')?.touched && employeeForm.get('angular')?.invalid">
+                    <p>You should fill this one</p>
+                </div>
         <br>
     </div>
 
@@ -166,10 +182,18 @@
         <h3>Years of Experince in</h3>
         <label for="">NODE-JS:</label>
         <input formControlName="node" type="text">
+                <!-- validators for Dynamic Form -->
+                <div class="error" *ngIf="employeeForm.get('node')?.touched && employeeForm.get('node')?.invalid">
+                    <p>You should fill this one</p>
+                </div>
         <br>
 
         <label for="">EXPRESS-JS:</label>
         <input formControlName="express" type="text">
+                <!-- validators for Dynamic Form -->
+                <div class="error" *ngIf="employeeForm.get('express')?.touched && employeeForm.get('express')?.invalid">
+                    <p>You should fill this one</p>
+                </div>
         <br>
 
         <label for="">MONGO DB:</label>
