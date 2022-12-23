@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-employee',
@@ -9,9 +9,9 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 export class CreateEmployeeComponent {
 
   public employeeForm:FormGroup = new FormGroup({
-    name: new FormControl(),
-    mobile: new FormControl(),
-    email: new FormControl(),
+    name: new FormControl(null , [Validators.required, Validators.minLength(4), Validators.maxLength(10)]),
+    mobile: new FormControl( null, [Validators.required, Validators.min(1000000000), Validators.max(9999999999)]),
+    email: new FormControl(null, [Validators.required, Validators.email]),
     DoB: new FormControl(),
 
     // Nested Form

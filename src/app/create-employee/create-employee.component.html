@@ -1,14 +1,32 @@
 <form [formGroup]="employeeForm" action="">
     <label for="">Name:</label>
     <input formControlName="name" type="text" name="" id="">
+
+    <!-- adding validators (This type was Normal form) -->
+    <div *ngIf="employeeForm.get('name')?.touched && employeeForm.get('name')?.invalid">
+        <p *ngIf="employeeForm.get('name')?.errors?.['required']">Name is required</p>
+        <p *ngIf="employeeForm.get('name')?.errors?.['minlength']">Name sholud have min 4 chars</p>
+        <p *ngIf="employeeForm.get('name')?.errors?.['maxlength']">Name shouldn't have max 15 chars</p>
+    </div>
     <br>
 
     <label for="">Mobile No:</label>
     <input formControlName="mobile" type="number" name="" id="">
+       <!-- adding validators (This type was Normal form) -->
+       <div *ngIf="employeeForm.get('mobile')?.touched && employeeForm.get('mobile')?.invalid">
+        <p *ngIf="employeeForm.get('mobile')?.errors?.['required']">Number is required</p>
+        <p *ngIf="employeeForm.get('mobile')?.errors?.['min']">Number sholud have min 10 digits</p>
+        <p *ngIf="employeeForm.get('mobile')?.errors?.['max']">Number should have max 10 digits</p>
+    </div>
     <br>
 
     <label for="">Email:</label>
     <input formControlName="email" type="text" name="" id="">
+         <!-- adding validators (This type was Normal form) -->
+         <div *ngIf="employeeForm.get('email')?.touched && employeeForm.get('email')?.invalid">
+            <p *ngIf="employeeForm.get('email')?.errors?.['required']">Email is required</p>
+            <p *ngIf="employeeForm.get('email')?.errors?.['email']"> Enter Valid Email</p>
+        </div>
     <br>
 
     <label for="">DoB:</label>
