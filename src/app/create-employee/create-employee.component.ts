@@ -16,15 +16,15 @@ export class CreateEmployeeComponent {
 
     // Nested Form
     Adderess: new FormGroup({
-      addressLine:new FormControl(),
-      city:new FormControl(),
-      state:new FormControl(),
-      pincode:new FormControl(),
+      addressLine:new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
+      city:new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
+      state:new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
+      pincode:new FormControl( null, [Validators.required, Validators.min(100000), Validators.max(999999)]),
 
       // Double Nested Form
       Location: new FormGroup({
-        nearby: new FormControl(),
-        landmark: new FormControl()
+        nearby: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
+        landmark: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)])
       }),
     }),
         // FormArray
