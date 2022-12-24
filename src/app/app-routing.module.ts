@@ -15,7 +15,6 @@ import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MailComponent } from './mail/mail.component';
-import { NotifyForEmployeeGuard } from './notify-for-employee.guard';
 import { NotifyGuard } from './notify.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductsComponent } from './products/products.component';
@@ -41,7 +40,7 @@ const routes: Routes = [
           {path:'create-vehicle', component: CreateVehicleComponent},
           {path:"create-account", component:CreateAccountComponent},
           {path:'create-student', component:CreateStudentComponent , canDeactivate:[NotifyGuard]},
-          {path:"create-employee", component:CreateEmployeeComponent , canDeactivate:[NotifyForEmployeeGuard]}
+          {path:"create-employee", component:CreateEmployeeComponent , canDeactivate:[NotifyGuard]}
         ]},
   
   {path:'', component: LoginComponent},
