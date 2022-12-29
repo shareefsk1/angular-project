@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SbibankService } from '../sbibank.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class SbibankComponent {
   public order: any = ""
   public value: any = ""
 
-  constructor(private _sbiBankService:SbibankService){
+  constructor(private _sbiBankService:SbibankService , private _Router:Router){
       this._sbiBankService.getdata().subscribe(
         (data:any) => {
             this.accounts = data ;
@@ -58,6 +59,14 @@ deleteAccount(id:string){
       alert('internal server error') ;
     }
   )
+}
+
+view(id:any){
+  this._Router.navigateByUrl('/dashboard/bank-details/' + id)
+}
+
+edit(id:any){
+  this._Router.navigateByUrl('/dashboard/edit-bank/' + id)
 }
 
 }

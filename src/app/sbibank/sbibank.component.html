@@ -27,7 +27,12 @@
     <tbody>
         <tr *ngFor="let account of accounts">
             <td *ngFor="let key of keys">{{ account[key] }}</td>
-            <td ><button (click)="deleteAccount(account.id)" class="btn btn-danger">Delete</button></td>
+
+            <td ><button (click)="deleteAccount(account.id)" class="btn btn-danger">Delete</button>
+                <button (click)="view(account.id)" class="btn btn-primary">View</button>
+                <button (click)="edit(account.id)" class="btn btn-lite">Edit</button>
+            </td>
+            
         </tr>
     </tbody>
 </table>

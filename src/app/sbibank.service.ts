@@ -30,4 +30,14 @@ export class SbibankService {
    deleteAccount(id:any):Observable<any>{
     return this._httpService.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/" + id)
    }
+
+   accountDetails(id:any):Observable<any>{
+      return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/" + id)
+   }
+
+   update(data:any, id:any):Observable<any>{
+      return this._httpService.put('https://6128991386a213001729f9df.mockapi.io/test/v1/principals/' + id , data)
+   }
+
+
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
+import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
@@ -43,7 +44,9 @@ const routes: Routes = [
           {path:'create-student', component:CreateStudentComponent , canDeactivate:[NotifyGuard]},
           {path:"create-employee", component:CreateEmployeeComponent , canDeactivate:[NotifyGuard]},
           {path:'vehicle-details/:id', component:VehicleDetailsComponent},
-          {path:'edit-vehicle/:id', component:CreateVehicleComponent}
+          {path:'edit-vehicle/:id', component:CreateVehicleComponent},
+          {path:'bank-details/:id', component:BankDetailsComponent},
+          {path:'edit-bank/:id', component:CreateAccountComponent},
         ]},
   
   {path:'', component: LoginComponent},

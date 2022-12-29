@@ -1,4 +1,4 @@
-<h2>Bank Form: </h2>
+<h2> {{isEdit ? 'Update Form' : 'Create Form'}} </h2>
 <form  [formGroup]="accountForm" action="">
     <label for="">account_name</label>
     <input type="text" formControlName="account_name">
@@ -20,7 +20,11 @@
     <input type="text" formControlName="available_balance">
     <br>
 
+    <label for="">createdAt</label>
+    <input type="datetime" formControlName="createdAt">
+    <br>
+
 </form>
 
 <br>
-<button (click)="createAccount()"  class="btn btn-primary">Create Account</button>
+<button (click)="createAccount()"  class="btn btn-primary">{{isEdit ? 'Update Account' : 'Create Account'}} </button>
