@@ -76,5 +76,11 @@ export class VehicleComponent {
   view(id:string){
         this._router.navigateByUrl('/dashboard/vehicle-details/' + id)
   }
+
+  edit(id:string){
+    this._router.navigateByUrl('/dashboard/edit-vehicle/' + id)
+}
+
+  
       
 }

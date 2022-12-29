@@ -43,6 +43,7 @@ const routes: Routes = [
           {path:'create-student', component:CreateStudentComponent , canDeactivate:[NotifyGuard]},
           {path:"create-employee", component:CreateEmployeeComponent , canDeactivate:[NotifyGuard]},
           {path:'vehicle-details/:id', component:VehicleDetailsComponent},
+          {path:'edit-vehicle/:id', component:CreateVehicleComponent}
         ]},
   
   {path:'', component: LoginComponent},
