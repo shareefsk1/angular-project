@@ -28,7 +28,7 @@ export class CreateVehicleComponent {
   constructor(private _vehicleService: VehicleService , private _activeRouter:ActivatedRoute){
     _activeRouter.params.subscribe(
       (data:any) => {
-
+    // condition importent 
         if(data.id){
           this.isEdit = true ;
           this.id = data.id ;
