@@ -1,4 +1,9 @@
-<h1>Create Vehicle Form</h1>
+<h1>{{isEdit ? 'Edit Vehicle Form' : 'Create Vehicle Form'}}</h1>
+
+<!-- another method -->
+
+<h1 *ngIf="isEdit">Edit Vehicle Form</h1>
+<h1 *ngIf="!isEdit">Create Vehicle Form</h1>
 
 <form [formGroup]="vehicleForm">
 
