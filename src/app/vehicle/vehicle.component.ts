@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { VehicleService } from '../vehicle.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class VehicleComponent {
   public vehicles: any = []
 
 
-  constructor(private _vehicleService:VehicleService){
+  constructor(private _vehicleService:VehicleService ,  private _router:Router){
       this._vehicleService.getVehicles().subscribe(
         (data:any) => {
           this.vehicles = data ;
@@ -70,6 +71,10 @@ export class VehicleComponent {
         alert("Internal server error");
       }
     )
+  }
+
+  view(id:string){
+        this._router.navigateByUrl('/dashboard/vehicle-details/' + id)
   }
       
 }

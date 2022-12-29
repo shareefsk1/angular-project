@@ -39,7 +39,9 @@
             <td><img src="{{vehicle.image}}" alt="" width="50" height="50"></td>
             <td>{{vehicle.id}}</td>
             <td>
-                <button (click)="delete(vehicle.id)">delete</button>
+                <button class="btn btn-danger" (click)="delete(vehicle.id)">delete</button>
+                <button class="btn btn-primary" (click)="view(vehicle.id)">View</button>
+                <button class="btn btn-light">Edit</button>
             </td>
         </tr>
     </tbody>

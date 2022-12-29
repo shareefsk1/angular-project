@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductsComponent } from './products/products.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
@@ -40,7 +41,8 @@ const routes: Routes = [
           {path:'create-vehicle', component: CreateVehicleComponent},
           {path:"create-account", component:CreateAccountComponent},
           {path:'create-student', component:CreateStudentComponent , canDeactivate:[NotifyGuard]},
-          {path:"create-employee", component:CreateEmployeeComponent , canDeactivate:[NotifyGuard]}
+          {path:"create-employee", component:CreateEmployeeComponent , canDeactivate:[NotifyGuard]},
+          {path:'vehicle-details/:id', component:VehicleDetailsComponent},
         ]},
   
   {path:'', component: LoginComponent},
