@@ -27,6 +27,7 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { AboutUsModule } from './about-us/about-us.module';
+import { StarsComponent } from './stars/stars.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { AboutUsModule } from './about-us/about-us.module';
     CreateEmployeeComponent,
     VehicleDetailsComponent,
     BankDetailsComponent,
+    StarsComponent,
   
   ],
   imports: [

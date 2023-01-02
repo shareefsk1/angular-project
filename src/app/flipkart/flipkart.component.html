@@ -7,6 +7,7 @@
             <p ><label for="" style="font-weight: bol;">Name: </label> {{product.title}}</p>
             <p><label for="" style="font-weight: bold;">Price: </label> {{product.price | currency:"INR":"symbol"}}</p>
             <p><label for="" style="font-weight: bold;">Total Reviews: </label> {{product.rating.count}}</p>
+            <app-stars [rating]="product.rating.rate"></app-stars>
             <p> <label for="" style="font-weight: bold;">Rate: </label> {{product.rating.rate}} </p>
             <p class="desc"><label for="" style="font-weight: bold;">Description: </label> {{product.description}}</p>
         </div>

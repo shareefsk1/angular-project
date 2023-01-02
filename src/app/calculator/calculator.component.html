@@ -1,6 +1,8 @@
 <div class="parent">
     <h1>Calculator</h1>
 
+  
+
     <input [(ngModel)]="firstnumber" type="number"> 
     <br> <br>
     <input [(ngModel)]="secondnumber" type="number">
@@ -11,4 +13,6 @@
     <button (click)="div()">Division(/)</button>
 
     <h2>Result is: {{result}} </h2>
+
+    <app-stars [rating] = '5'></app-stars>
 </div>
