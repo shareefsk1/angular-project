@@ -26,6 +26,7 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { BankDetailsComponent } from './bank-details/bank-details.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { BankDetailsComponent } from './bank-details/bank-details.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
