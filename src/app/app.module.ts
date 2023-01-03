@@ -28,6 +28,10 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { StarsComponent } from './stars/stars.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildrenComponent } from './children/children.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 
 @NgModule({
@@ -55,6 +59,10 @@ import { StarsComponent } from './stars/stars.component';
     VehicleDetailsComponent,
     BankDetailsComponent,
     StarsComponent,
+    ParentComponent,
+    ChildrenComponent,
+    Sibling1Component,
+    Sibling2Component,
   
   ],
   imports: [

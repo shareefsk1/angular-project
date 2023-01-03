@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { MailComponent } from './mail/mail.component';
 import { NotifyGuard } from './notify.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ParentComponent } from './parent/parent.component';
 import { ProductsComponent } from './products/products.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
@@ -49,6 +50,7 @@ const routes: Routes = [
           {path:'bank-details/:id', component:BankDetailsComponent},
           {path:'edit-bank/:id', component:CreateAccountComponent},
           {path:'about-company', component:AboutCompanyComponent},
+          {path:'parent' , component:ParentComponent},
           {
             path: 'contact-us',
             loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
