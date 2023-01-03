@@ -23,6 +23,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ProductsComponent } from './products/products.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
@@ -51,6 +53,8 @@ const routes: Routes = [
           {path:'edit-bank/:id', component:CreateAccountComponent},
           {path:'about-company', component:AboutCompanyComponent},
           {path:'parent' , component:ParentComponent},
+          {path: 'sibling1', component:Sibling1Component},
+          {path: 'sibling2', component:Sibling2Component},
           {
             path: 'contact-us',
             loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
