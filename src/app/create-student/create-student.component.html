@@ -38,6 +38,8 @@
     <div class="error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid">
         <p *ngIf="studentForm.get('email')?.errors?.['required']"> Email  is required</p>
         <p *ngIf="studentForm.get('email')?.errors?.['email']"> Enter valid Email</p>
+        <!-- For custom validator (emaildomain) -->
+        <p *ngIf="studentForm.get('email')?.errors?.['emailDomain']"> Email should be @capgemini.com</p>
     </div>
     <br>
 
