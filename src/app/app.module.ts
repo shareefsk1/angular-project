@@ -15,7 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { ProductsComponent } from './products/products.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { SbibankComponent } from './sbibank/sbibank.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
@@ -35,6 +35,7 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { PricePipe } from './price.pipe';
 import { AgePipePipe } from './age-pipe.pipe';
 import { ImpDirective } from './imp.directive';
+import { TokenInterceptor } from './token.interceptor';
 
 
 @NgModule({
@@ -79,7 +80,13 @@ import { ImpDirective } from './imp.directive';
     ReactiveFormsModule,
     AboutUsModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
