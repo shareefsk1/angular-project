@@ -38,7 +38,7 @@
     <tbody>
         <tr *ngFor="let user of users">
             <td> {{user.name | uppercase}}</td>
-            <td [ngClass]="{ 'red':0 < user.age && user.age < 10, 'yellow':10< user.age && user.age < 20 ,'green':20< user.age && user.age < 35  }">{{user.age}}</td>
+            <td [ngClass]="{ 'red':0 < user.age && user.age < 10, 'yellow':10< user.age && user.age < 20 ,'green':20< user.age && user.age < 35  }">{{user.age | agePipe}}</td>
             <td [ngStyle]="{'background-color':user.package <= 10?'red':'green'}">{{user.package}}</td>
             <td>{{user.Location}}</td>
         </tr>

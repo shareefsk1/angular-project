@@ -32,6 +32,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildrenComponent } from './children/children.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
+import { PricePipe } from './price.pipe';
+import { AgePipePipe } from './age-pipe.pipe';
 
 
 @NgModule({
@@ -63,6 +65,8 @@ import { Sibling2Component } from './sibling2/sibling2.component';
     ChildrenComponent,
     Sibling1Component,
     Sibling2Component,
+    PricePipe,
+    AgePipePipe,
   
   ],
   imports: [
