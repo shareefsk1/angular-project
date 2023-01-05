@@ -36,6 +36,7 @@ import { PricePipe } from './price.pipe';
 import { AgePipePipe } from './age-pipe.pipe';
 import { ImpDirective } from './imp.directive';
 import { TokenInterceptor } from './token.interceptor';
+import { HooksComponent } from './hooks/hooks.component';
 
 
 @NgModule({
@@ -70,6 +71,7 @@ import { TokenInterceptor } from './token.interceptor';
     PricePipe,
     AgePipePipe,
     ImpDirective,
+    HooksComponent,
   
   ],
   imports: [
